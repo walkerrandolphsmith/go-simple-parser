@@ -8,7 +8,7 @@ import (
 
 type RecursiveDescentParser struct {
 	symbol int
-	root BooleanExpression
+	root boolean_expression.BooleanExpression
 	t true_node.True
 	f false_node.False
 }
