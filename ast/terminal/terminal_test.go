@@ -5,15 +5,23 @@ import (
 )
 
 func TestNew(t *testing.T) {
-	f := New(false)
-	if f.Value != false {
+	node := New(false)
+	if node.Value != false {
 		t.Errorf("False was not interpreted as false");
 	}
 }
 
 func TestInterpret(t *testing.T) {
-	f := New(false)
-	if f.Interpret() != false {
+	node := New(false)
+	if node.Interpret() != false {
 		t.Errorf("False was not interpreted as false");
+	}
+}
+
+func TestStringify(t *testing.T) {
+	node := New(true)
+
+	if node.Stringify() != "true" {
+		t.Errorf("And is not stringified correctly")
 	}
 }

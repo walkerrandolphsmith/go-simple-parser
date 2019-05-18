@@ -37,4 +37,8 @@ func TestInterpret(t *testing.T) {
 	if node.Interpret() != false {
 		t.Errorf("false and false != false")
 	}
+
+	if node.Stringify() != "(false && false)" {
+		t.Errorf("And not stringified correctly")
+	}
 }

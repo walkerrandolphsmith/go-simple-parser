@@ -11,14 +11,13 @@ type Terminal struct {
 }
 
 func New(value bool) Terminal {
-	t := Terminal { Value: value }
-	return t
+	return Terminal { Value: value }
 }
 
 func (t Terminal) Interpret() bool {
 	return t.Value
 }
 
-func Stringify(t Terminal) string {
+func (t Terminal) Stringify() string {
 	return strconv.FormatBool(t.Value)
 }

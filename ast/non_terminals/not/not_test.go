@@ -22,4 +22,14 @@ func TestInterpret(t *testing.T) {
 	if node.Interpret() != true {
 		t.Errorf("not false != true")
 	}
+
+	node.SetRight(trueNode)
+
+	if node.Right != nil {
+		t.Errorf("Uranary opertators can't have a Right node")
+	}
+
+	if node.Stringify() != "!false" {
+		t.Errorf("Not not stringified correctly")
+	}
 }

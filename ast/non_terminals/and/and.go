@@ -17,5 +17,5 @@ func (node *And) Interpret() bool {
 }
 
 func (node *And) Stringify() string {
-	return "(" + node.Left.Stringify() + " & "  + node.Right.Stringify() + ")"
+	return "(" + node.Left.Stringify() + " && "  + node.Right.Stringify() + ")"
 }

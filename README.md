@@ -18,5 +18,5 @@ Here is the BNF I plan to go by:
 
 ## Test
 ```
-go test ./...
+go test ./... -cover
 ```
